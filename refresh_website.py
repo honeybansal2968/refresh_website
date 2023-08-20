@@ -27,19 +27,18 @@ def refresh_youtube():
     driver.get(url)
 
     # Define the number of times to refresh the page
-    refresh_count = 10
 
-    for _ in range(refresh_count):
+    while True:
         # Refresh the page
         driver.refresh()
 
         # Wait for a certain amount of time before the next refresh
         time.sleep(5)  # You can adjust the time interval
         print('Refreshed page')
-    # Close the WebDriver
-    driver.quit()
+    # # Close the WebDriver
+    # driver.quit()
 
-    return jsonify({"message": "YouTube page refreshed successfully."})
+        return jsonify({"message": "YouTube page refreshed successfully."})
 
 if __name__ == '__main__':
     app.run(debug=True)
