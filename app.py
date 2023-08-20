@@ -35,10 +35,7 @@ def refresh_youtube():
         # Wait for a certain amount of time before the next refresh
         time.sleep(5)  # You can adjust the time interval
         print('Refreshed page')
-    # # Close the WebDriver
-    # driver.quit()
 
-        return jsonify({"message": "YouTube page refreshed successfully."})
 
 if __name__ == '__main__':
     app.run(debug=True)
