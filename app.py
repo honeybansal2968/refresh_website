@@ -20,7 +20,7 @@ def refresh_youtube():
     chrome_options.add_argument('--disable-gpu')  # Needed for Windows systems
 
     # Create a WebDriver instance in headless mode
-    driver = webdriver.Chrome(options=chrome_options)
+    driver = webdriver.Chrome(options=chrome_options, service=service)
 
     # Open the URL of the web page you want to refresh
     url = 'https://www.youtube.com'
@@ -38,4 +38,4 @@ def refresh_youtube():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=10000,threaded=True)
